@@ -13,6 +13,7 @@ router.get('/', function(req, res) {
   //__dirname : It will resolve to your project folder.
 });
 
+//JaewoongByeon -->
 router.get('/b', function (req, res) {
     res.sendFile(path.join(__dirname + '/byeon/index.html'));
 });
