@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script>
+        var sentence = "Hi, my name is Sam!";
+        var sentence1 = sentence.split(" ");
+        var sentence2 = sentence.split(", ");
+        var sentence3 = sentence.split(" ");
+        var sentence4 = sentence.substring(sentence.indexOf("name"),sentence.indexOf("name")+4);
+        var sentence5 = sentence.substring(sentence.indexOf("Sam"),sentence.indexOf("Sam")+3);
+        var str1 = 'JavaScript Program to illustrate split() function'
+        var split1 = str1.split(" ");
+        var str2 = '10,20,30,40,50'
+        var split2 = str2.split(",");
+    </script>
+</head>
+
+<body class="bg-dark">
+    <div class="text-white border border-secondary">출력 : <span id="output1"></span><br></div>
+    <div class="text-white border border-secondary">출력 : <span id="output2"></span><br></div>
+    <div class="text-white border border-secondary">출력 : <span id="output3"></span><br></div>
+    <div class="text-white border border-secondary">출력 : <span id="output4"></span><br></div>
+    <div class="text-white border border-secondary">출력 : <span id="output5"></span><br></div>
+    <div class="text-white border border-secondary">출력 : <span id="output6"></span><br></div>
+    <div class="text-white border border-secondary">출력 : <span id="output7"></span><br></div>
+    <div class="text-white border border-secondary">출력 : <span id="output8"></span><br></div>
+    <div class="text-white border border-secondary">출력 : <span id="output9"></span><br></div>
+    <div class="text-white border border-secondary">출력 : <span id="output10"></span><br></div>
+    <div class="text-white border border-secondary">출력 : <span id="output11"></span><br></div>
+    <div class="text-white border border-secondary">출력 : <span id="output12"></span><br></div>
+    <div class="text-white border border-secondary">출력 : <span id="output13"></span><br></div>
+    <div class="text-white border border-secondary">출력 : <span id="output14"></span><br></div>
+    <div class="text-white border border-secondary">출력 : <span id="output15"></span><br></div>
+    <div class="text-white border border-secondary">출력 : <span id="output16"></span><br></div>
+    <script>
+        document.getElementById("output1").innerHTML = sentence1[0];
+        document.getElementById("output2").innerHTML = sentence2[1];
+        document.getElementById("output3").innerHTML = sentence3[0] + ' ' + sentence3[4];
+        document.getElementById("output4").innerHTML = sentence4;
+        document.getElementById("output5").innerHTML = sentence5;
+        document.getElementById("output6").innerHTML = split1[0];
+        document.getElementById("output7").innerHTML = split1[1];
+        document.getElementById("output8").innerHTML = split1[2];
+        document.getElementById("output9").innerHTML = split1[3];
+        document.getElementById("output10").innerHTML = split1[4];
+        document.getElementById("output11").innerHTML = split1[5];
+        document.getElementById("output12").innerHTML = split2[0];
+        document.getElementById("output13").innerHTML = split2[1];
+        document.getElementById("output14").innerHTML = split2[2];
+        document.getElementById("output15").innerHTML = split2[3];
+        document.getElementById("output16").innerHTML = split2[4];
+
+
+
+
+    </script>
+</body>
+
+</html>
