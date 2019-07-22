@@ -18,7 +18,8 @@
         var sentence = "Hi, my name is Sam!";
         var sentence1 = sentence.split(" ");
         var sentence2 = sentence.split(", ");
-        var sentence3 = sentence.split(" ");
+        var sentence3_array = sentence.split(" ");
+        var sentence3 = sentence3_array[0]+' '+sentence3_array[4];
         var sentence4 = sentence.substring(sentence.indexOf("name"),sentence.indexOf("name")+4);
         var sentence5 = sentence.substring(sentence.indexOf("Sam"),sentence.indexOf("Sam")+3);
         var str1 = 'JavaScript Program to illustrate split() function'
@@ -48,7 +49,7 @@
     <script>
         document.getElementById("output1").innerHTML = sentence1[0];
         document.getElementById("output2").innerHTML = sentence2[1];
-        document.getElementById("output3").innerHTML = sentence3[0] + ' ' + sentence3[4];
+        document.getElementById("output3").innerHTML = sentence3;
         document.getElementById("output4").innerHTML = sentence4;
         document.getElementById("output5").innerHTML = sentence5;
         document.getElementById("output6").innerHTML = split1[0];
