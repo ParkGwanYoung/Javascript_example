@@ -23,9 +23,9 @@
         var splitcommas = "a,b, c,|d, e";
         var splitspaces = "a,b, c,|d, e";
         var splitsign = "a,b, c,|d, e";
-        splitcommas.split(",");
-        splitspaces.split("");
-        var split =splitsign.split("|");
+        var splitcommas_array = splitcommas.split(",");
+        var splitspaces_array = splitspaces.split(" ");
+        var splitsign_array =splitsign.split("|");
     </script>
 </head>
 
@@ -40,9 +40,9 @@
     <script>
         document.getElementById("demo05").innerHTML = concat;
         document.getElementById("demo06").innerHTML = trim;
-        document.getElementById("demo07").innerHTML = splitcommas[0];
-        document.getElementById("demo08").innerHTML = splitspaces[1];
-        document.getElementById("demo09").innerHTML = split[1];
+        document.getElementById("demo07").innerHTML = splitcommas_array[1];
+        document.getElementById("demo08").innerHTML = splitspaces_array[1];
+        document.getElementById("demo09").innerHTML = splitsign_array[1];
     </script>
 </body>
 
