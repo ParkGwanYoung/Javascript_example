@@ -31,6 +31,12 @@ router.get('/b/submit', function (req, res) {
 router.get('/p/intro', function(req, res) {
   res.sendFile(path.join(__dirname + '/park/01_intro.html'));
 });
+router.get('/p/script', function(req, res) {
+  res.sendFile(path.join(__dirname + '/park/02_script.html'));
+});
+router.get('/p/output_display', function(req, res) {
+  res.sendFile(path.join(__dirname + '/park/03_output_display.html'));
+});
 router.get('/p/index', function(req, res) {
   res.sendFile(path.join(__dirname + '/park/index.html'));
 });
@@ -44,31 +50,6 @@ router.get('/p/write', function(req, res) {
   res.sendFile(path.join(__dirname + '/park/write.html'));
 });
 //////////////////////////////////////////////////
-// Byeolchan -->
-router.get('/Byeolchan', function(req, res) {
-  res.sendFile(path.join(__dirname + '/Byeolchan/views/main.html'));
-});
-
-router.get('/Byeolchan/logout', function(req, res) {
-  res.sendFile(path.join(__dirname + '/Byeolchan/views/logout.html'));
-});
-
-router.get('/Byeolchan/notice_detail', function(req, res) {
-  res.sendFile(path.join(__dirname + '/Byeolchan/views/notice_detail.html'));
-});
-
-router.get('/Byeolchan/sign_up', function(req, res) {
-  res.sendFile(path.join(__dirname + '/Byeolchan/views/sign_up.html'));
-});
-
-router.get('/Byeolchan/notice', function(req, res) {
-  res.sendFile(path.join(__dirname + '/Byeolchan/views/notice.html'));
-});
-
-router.get('/Byeolchan/sign_in', function(req, res) {
-  res.sendFile(path.join(__dirname + '/Byeolchan/views/sign_in.html'));
-});
-// <--Byeolchan
 
 router.get('/park/sign_up', function(req, res) {
   res.send(
