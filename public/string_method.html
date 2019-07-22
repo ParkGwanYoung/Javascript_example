@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script>
+        var sentence = "Hi, my name is Sam!";
+        var first = sentence.substring(0,3);
+        var second = sentence.substring(4,19);
+        var third_end = sentence.substring(15,19)
+        var third = first.concat(" ",third_end);
+        var forth = sentence.substring(4,18);
+        var fifth = sentence.substring(4,18);
+        
+        /////////////////////////////1
+        var str1 = 'JavaScript Program to illustrate split() function';
+        var split1 = str1.split(" ");
+        /////////////////////////////2
+        var str2 = '10,20,30,40,50';
+        var split2 = str2.split(",");
+        /////////////////////////////3
+    </script>
+</head>
+
+<body class="bg-success">
+    <div class="container bg-primary border border-warning m-5">
+        <div class="text-white m-3 font-weight-bold border border-white">출력 : <span id="first"></span></div>
+        <div class="text-white m-3 font-weight-bold border border-white">출력 : <span id="second"></span></div>
+        <div class="text-white m-3 font-weight-bold border border-white">출력 : <span id="third"></span></div>
+        <div class="text-white m-3 font-weight-bold border border-white">출력 : <span id="forth"></span></div>
+        <div class="text-white m-3 font-weight-bold border border-white">출력 : <span id="fifth"></span></div>
+    </div>
+    <!-- ///////////////////////////////////////1 -->
+    <div class="container bg-primary border border-warning m-5">
+        <div class="text-white m-3 font-weight-bold border border-white">출력 : <span id="split1"></span></div>
+        <div class="text-white m-3 font-weight-bold border border-white">출력 : <span id="split2"></span></div>
+        <div class="text-white m-3 font-weight-bold border border-white">출력 : <span id="split3"></span></div>
+        <div class="text-white m-3 font-weight-bold border border-white">출력 : <span id="split4"></span></div>
+        <div class="text-white m-3 font-weight-bold border border-white">출력 : <span id="split5"></span></div>
+        <div class="text-white m-3 font-weight-bold border border-white">출력 : <span id="split6"></span></div>
+    </div>
+    <!-- ///////////////////////////////////////2 -->
+    <div class="container bg-primary border border-warning m-5">
+        <div class="text-white m-3 font-weight-bold border border-white">출력 : <span id="split01"></span></div>
+        <div class="text-white m-3 font-weight-bold border border-white">출력 : <span id="split02"></span></div>
+        <div class="text-white m-3 font-weight-bold border border-white">출력 : <span id="split03"></span></div>
+        <div class="text-white m-3 font-weight-bold border border-white">출력 : <span id="split04"></span></div>
+        <div class="text-white m-3 font-weight-bold border border-white">출력 : <span id="split05"></span></div>
+    </div>
+    <!-- ///////////////////////////////////////3 -->
+    <script>
+        document.getElementById("first").innerHTML = first;
+        document.getElementById("second").innerHTML = second;
+        document.getElementById("third").innerHTML = third;
+        document.getElementById("forth").innerHTML = forth;
+        document.getElementById("fifth").innerHTML = fifth;
+        //////////////////////////////////////////1
+        document.getElementById("split1").innerHTML = split1[0];
+        document.getElementById("split2").innerHTML = split1[1];
+        document.getElementById("split3").innerHTML = split1[2];
+        document.getElementById("split4").innerHTML = split1[3];
+        document.getElementById("split5").innerHTML = split1[4];
+        document.getElementById("split6").innerHTML = split1[5];
+        //////////////////////////////////////////2
+        document.getElementById("split01").innerHTML = split2[0];
+        document.getElementById("split02").innerHTML = split2[1];
+        document.getElementById("split03").innerHTML = split2[2];
+        document.getElementById("split04").innerHTML = split2[3];
+        document.getElementById("split05").innerHTML = split2[4];
+        //////////////////////////////////////////3
+    </script>
+</body>
+
+</html>
