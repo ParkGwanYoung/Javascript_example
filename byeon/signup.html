@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-info navbar-dark justify-content-between">
+
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="/b" class="navbar-brand">Tealsoft</a>
+            </li>
+            <li class="nav-item">
+                <a href="/b" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Introduce</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Product</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">License</a>
+            </li>
+            <li class="nav-item">
+                <a href="/b/notice" class="nav-link">Notice</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Support</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav">
+            <div class="btn-group" role="group">
+                <a href="/b/signup" class="btn btn-outline-light" role="button">Sign Up</a>
+                <a href="/b/login" class="btn btn-outline-light" role="button">Login</a>
+            </div>
+        </ul>
+    </nav>
+    <div class="card bg-dark text-left text-white px-5 py-3">
+        <div class="row no-gutters justify-content-between">
+            <div class="card-body">
+                <h2 class="card-title mx-5">Sign Up</h2>
+                <p class="card-text mx-5">You are welcome to become Tealsoft's member!</p>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <form action="/b/submit">
+        <div class="card-deck">
+            <div class="card">
+                <div class="card-header font-weight-bold">Required Information</div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label class="font-weight-bold">
+                                Name
+                            </label>
+                            <div class="input-group">
+                                <input type="text" class="form-control col" name="firstname" placeholder="Firstname">
+                                <input type="text" class="form-control col" name="surname" placeholder="Surname">
+                            </div>
+                        </div>
+                        <label class="font-weight-bold">E-mail</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><span class="fas fa-user"></span></span>
+                            </div>
+                            <input type="email" class="form-control" placeholder="Enter your E-mail address"
+                                name="email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold">
+                            Password
+                        </label>
+                        <label>
+                            <ul>
+                                <li>Password should be 8-20 characters</li>
+                                <li>Can use A-Z, a-z, 0-9, special characters</li>
+                            </ul>
+                        </label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><span class="fas fa-lock"></span></span>
+                            </div>
+                            <input type="password" class="form-control" placeholder="Enter password" name="pwd">
+                        </div>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><span class="fas fa-lock"></span></span>
+                            </div>
+                            <input type="password" class="form-control" placeholder="Confirm password" name="pwdcf">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header font-weight-bold">Optional Information</div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="tel" class="font-weight-bold">
+                            Mobile Phone
+                        </label>
+                        <input type="tel" class="form-control col" name="tel"
+                            placeholder="Enter your mobile phone number">
+                    </div>
+                    <label class="font-weight-bold">
+                        Date of Birth
+                    </label>
+                    <div class="form-group input-group">
+                        <input type="text" class="form-control col" name="month" maxlength="2" placeholder="Month">
+                        <span class="input-group-text">/</span>
+                        <input type="text" class="form-control col" name="date" maxlength="2" placeholder="Date">
+                        <span class="input-group-text">/</span>
+                        <input type="text" class="form-control col" name="year" maxlength="4" placeholder="Year">
+                    </div>
+                    <div class="form-group">
+                        <label for="select" class="font-weight-bold">Gender</label>
+                        <select class="custom-select" name="gender">
+                            <option selected disabled>Gender</option>
+                            <option value="m">Male</option>
+                            <option value="f">Female</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body text-center">
+                    <div class="form-check py-5">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" name="agree"> I'd like to receive Tealsoft's
+                            promotion and event mail
+                        </label>
+                    </div>
+                    <p class="card-text">
+                        By clicking the submit button below, you agree to the
+                        <a href="#" data-toggle="modal" data-target="#modal">Terms of Use and Privacy Policy</a>
+                        of our website.
+                    </p>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+        </form>
+    </div>
+    <div class="modal fade" id="modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">
+                        Terms of Use and Privacy Policy
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor mauris non tortor
+                        consectetur, ut fermentum lectus suscipit. Curabitur in mauris sed lacus auctor consectetur non
+                        in mi. Nullam dictum nunc ac facilisis faucibus. Vestibulum cursus ultrices augue, in volutpat
+                        sapien bibendum a. Aenean id lacus interdum, venenatis ipsum vitae, congue est. Duis metus nunc,
+                        porta in mi non, efficitur suscipit tortor. Nunc sit amet magna sed ante tempor venenatis.
+                        Pellentesque at felis vel massa sollicitudin tristique. Quisque tincidunt condimentum justo nec
+                        sagittis.
+                    </p>
+                    <p>
+                        Vivamus non ante eleifend, faucibus libero in, venenatis lorem. Nulla tempor nec ligula nec
+                        imperdiet. Nam lacus metus, porttitor et augue in, consequat imperdiet enim. Morbi vitae mauris
+                        sed urna vulputate ullamcorper at id mi. Praesent in massa elit. Nam sit amet vestibulum ipsum.
+                        In imperdiet venenatis erat eget lobortis. Aenean mattis odio eget sem sollicitudin, at maximus
+                        felis pretium.
+                    </p>
+                    <p>
+                        Proin vehicula posuere tincidunt. In odio quam, semper vel facilisis vitae, blandit sed
+                        magna. Phasellus vulputate magna auctor metus faucibus hendrerit. Maecenas sapien felis,
+                        tempus ut urna sed, euismod aliquam tortor. Cras elementum purus eget est volutpat, at
+                        tempus metus lacinia. Fusce pretium placerat sapien quis sagittis. Aenean malesuada magna
+                        nunc, nec mattis ex sollicitudin at. Mauris elementum hendrerit orci, sed rhoncus nisl. Nunc
+                        id risus ac diam placerat aliquet.
+                    </p>
+                    <p>
+                        Sed laoreet bibendum mauris. Maecenas elementum dignissim elit eu efficitur. Integer
+                        vestibulum malesuada luctus. Pellentesque sed nisl ex. Donec vitae nibh non lorem posuere
+                        pharetra. Donec iaculis, lectus at mattis laoreet, libero ex posuere quam, eu efficitur
+                        velit magna quis nisl. Proin lobortis interdum fringilla. Vestibulum ante ipsum primis in
+                        faucibus orci luctus et ultrices posuere cubilia Curae; Fusce dictum eu dolor vel blandit.
+                        Cras id elementum urna.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
