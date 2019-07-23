@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function validateform() {
+            var name = document.myform.name.value;
+            var password = document.myform.password.value;
+            var pw_length = password.length;
+            var
+            if (name == null || name == "" || pw_length <= 6) {
+                var strvalidation = "Name can't be blank<br>password must be at least 6 characters long.";
+                document.getElementById("demo01").innerHTML = strvalidation;
+                return false;
+            }
+            else if (name == null || name == "") {
+                var strvalidation = "Name can't be blank";
+                document.getElementById("demo01").innerHTML = strvalidation;
+                return false;
+            }
+            else if (pw_length <= 6) {
+                var strvalidation = "password must be at least 6 characters long.";
+                document.getElementById("demo01").innerHTML = strvalidation;
+                return false;
+            }
+
+            return ture;
+
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="demo01"></div>
+
+        <form name="myform" action="/login" onsubmit="return validateform()">
+            Name: <input type="text" name="name"><br />
+            Password: <input type="password" name="password"><br />
+            <input type="submit" value="register">
+        </form>
+    </div>
+</body>
+
+</html>
