@@ -50,7 +50,13 @@ router.get('/p/notice', function(req, res) {
 router.get('/p/write', function(req, res) {
   res.sendFile(path.join(__dirname + '/park/write.html'));
 });
-//////////////////////////////////////////////////
+router.get('/onsubmit', function(req, res) {
+  res.sendFile(path.join(__dirname + '/public/onsubmit.html'));
+});
+router.get('/p/event', function(req, res) {
+  res.sendFile(path.join(__dirname + '/park/event.html'));
+});
+
 
 router.get('/park/sign_up', function(req, res) {
   res.send(
@@ -63,6 +69,16 @@ router.get('/park/notice_board', function(req, res) {
       '<br>제목 : ' + req.query.title + '<br>작성자 : ' + req.query.writer +
       '<br>내용 : ' + req.query.content + "<p><a href=\"/p/index\">Go to Main Page</a></p>")
 });
+router.get('/login', function(req, res) {
+  res.send(
+      '<br>Name : ' + req.query.name + '<br>Password : ' + req.query.password)
+});
+router.get('/p/login', function(req, res) {
+  res.send(
+      '<br>First_Name : ' + req.query.first_name + '<br>Last_Name : ' + req.query.last_name
+      + '<br>Username : ' + req.query.username)
+});
+//////////////////////////////////////////////////
 
 
 
