@@ -1,0 +1,11 @@
+var sentence = "Hi, my name is Sam!";
+var sentence1 = sentence.split(" ");
+var sentence2 = sentence.split(", ");
+var sentence3_array = sentence.split(" ");
+var sentence3 = sentence3_array[0]+' '+sentence3_array[4];
+var sentence4 = sentence.substring(sentence.indexOf("name"),sentence.indexOf("name")+4);
+var sentence5 = sentence.substring(sentence.indexOf("Sam"),sentence.indexOf("Sam")+3);
+var str1 = 'JavaScript Program to illustrate split() function'
+var split1 = str1.split(" ");
+var str2 = '10,20,30,40,50'
+var split2 = str2.split(",");
