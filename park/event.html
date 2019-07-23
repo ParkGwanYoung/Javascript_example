@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+
+        function validateform() {
+            var first_name = document.myform.first_name.value;
+            var last_name = document.myform.last_name.value;
+            var username = document.myform.username.value;
+            var check;
+
+            if (first_name == null || first_name == "") {
+                var strvalidation = "Please choose a First name";
+                document.getElementById("first_name").innerHTML = strvalidation;
+                check=false;
+            }
+            else{
+                var strvalidation = "Looks good!"
+                document.getElementById("first_name").innerHTML = strvalidation;
+                check=true;
+            }return check;
+            ////////////////////////////////
+            if (last_name == null || last_name == "") {
+                var strvalidation = "Please choose a Last name";
+                document.getElementById("last_name").innerHTML = strvalidation;
+                return false;
+            }
+            else {
+                var strvalidation = "Looks good!"
+                document.getElementById("last_name").innerHTML = strvalidation;
+                return true;
+            }
+            //////////////////////////////////
+            if (username == null || username == "") {
+                var strvalidation = "Please choose a Username";
+                document.getElementById("username").innerHTML = strvalidation;
+                return false;
+            }
+            else {
+                var strvalidation = "Looks good!"
+                document.getElementById("username").innerHTML = strvalidation;
+                return true;
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <div id="first_name"></div>
+            <div id="last_name"></div>
+            <div id="username"></div>
+        </div>
+        <form name="myform" action="/p/login" onsubmit="return validateform()">
+            first_name: <input type="text" name="first_name"><br />
+            last_name: <input type="text" name="last_name"><br />
+            username: <input type="text" name="username"><br />
+            <input type="submit" cla value="register">
+        </form>
+    </div>
+</body>
+
+</html>

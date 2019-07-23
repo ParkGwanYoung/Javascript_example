@@ -7,25 +7,24 @@
             var name = document.myform.name.value;
             var password = document.myform.password.value;
             var pw_length = password.length;
-            var
-            if (name == null || name == "" || pw_length <= 6) {
-                var strvalidation = "Name can't be blank<br>password must be at least 6 characters long.";
-                document.getElementById("demo01").innerHTML = strvalidation;
-                return false;
-            }
-            else if (name == null || name == "") {
-                var strvalidation = "Name can't be blank";
-                document.getElementById("demo01").innerHTML = strvalidation;
-                return false;
+            var check;
+            // if (name == null || name == "" || pw_length <= 6) {
+            //     var strvalidation = "Name can't be blank<br>password must be at least 6 characters long.";
+            //     document.getElementById("demo01").innerHTML = strvalidation;
+            //     return false;
+            // }
+            if (name == null || name == "") {
+                var strvalidation1 = "Name can't be blank";
+                document.getElementById("demo01").innerHTML = strvalidation1;
+                check = false;
             }
             else if (pw_length <= 6) {
-                var strvalidation = "password must be at least 6 characters long.";
-                document.getElementById("demo01").innerHTML = strvalidation;
-                return false;
+                var strvalidation2 = "password must be at least 6 characters long.";
+                document.getElementById("demo02").innerHTML = strvalidation2;
+                check = false;
             }
-
-            return ture;
-
+            else{check = true}
+            return check;
         }
     </script>
 </head>
@@ -33,6 +32,7 @@
 <body>
     <div class="container">
         <div id="demo01"></div>
+        <div id="demo02"></div>
 
         <form name="myform" action="/login" onsubmit="return validateform()">
             Name: <input type="text" name="name"><br />
