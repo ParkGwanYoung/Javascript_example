@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <p id="demo01"></p>
+    <p id="demo02"></p>
+    <p id="demo03"></p>
+    <p id="demo04"></p>
+    <p id="demo05"></p>
+    <script>
+        var person01 = { firstName: "John", lastName: "Doe", age: 50, eyeColor: "blue" }
+        var x = person01.constructor(); x.age = 10;
+        
+        var person02 = {
+            firstName: "John", lastName: "Doe",
+            fullName: function (firstVal, secondVal) {
+                return this.firstName + " " + firstVal + " " + secondVal;
+            }
+        };
+        /*
+        var person02 = new Object();
+        person02.firstName = "John"; person02.lastName = "Doe";
+        person02.fullname = function (firstVal, secondVal) {
+            return this.firstName + " " + firstVal + " " + secondVal;
+        }
+        */
+        document.getElementById("demo01").innerHTML = person01.firstName + " is " + person01.age + " years old.";
+        person02.nationality = "Korean";
+        document.getElementById("demo02").innerHTML = person02.firstName + " is " + person02.nationality + ".";
+        delete person01.age;
+        document.getElementById("demo03").innerHTML = person01.firstName + "'s age: " + person01.age;
+        document.getElementById("demo04").innerHTML = person02.firstName + " " + person02["lastName"];
+        document.getElementById("demo05").innerHTML = person02.fullName("Jane", "Valet");
+    </script>
+</body>
+
+</html>
