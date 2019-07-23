@@ -20,8 +20,10 @@
         var second = sentence.substring(4,19);
         var third_end = sentence.substring(15,19)
         var third = first.concat(" ",third_end);
-        var forth = sentence.substring(sentence.indexOf("name"), sentence.indexOf("name") + 4);
-        var fifth = sentence.substring(sentence.indexOf("Sam"), sentence.indexOf("Sam") + 3);
+        var forth = sentence.substr(sentence.indexOf('name'),4);
+       // var forth = sentence.substring(sentence.indexOf("name"), sentence.indexOf("name") + 4);//'name'.length);
+        var fifth = sentence.substring(sentence.indexOf("Sam"), sentence.indexOf("Sam") + 3)//'Sam'.length);
+        
         
         /////////////////////////////1
         var str1 = 'JavaScript Program to illustrate split() function';

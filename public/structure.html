@@ -15,8 +15,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script>
-        var d = new Date();
-        var months = ["January", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October","November","December"];
+        function myFunction(p1,p2){
+            return p1 * p2;
+        }
+        function toCelsius(fahrenheit){
+            return (5/9) * (fahrenheit-32);
+        }
     </script>
 </head>
 
@@ -24,13 +28,11 @@
     <div class="container bg-primary border border-white m-5">
         <div class="text-white m-3 font-weight-bold border border-white"><span id="demo01"></span></div>
         <div class="text-white m-3 font-weight-bold border border-white"><span id="demo02"></span></div>
-        <div class="text-white m-3 font-weight-bold border border-white"><span id="demo03"></span></div>
     </div>
     <script>
-        document.getElementById("demo01").innerHTML = parseInt("10.33") + "<br>" + parseInt("10 6") + "<br>" + parseInt("years 10");
-        document.getElementById("demo02").innerHTML = months[d.getMonth()];
-        document.getElementById("demo03").innerHTML = Math.random();
-    </script>
+        document.getElementById("demo01").innerHTML = myFunction(4, 3);
+        document.getElementById("demo02").innerHTML = toCelsius(77) + "Celsius";
+        </script>
 </body>
 
 </html>
