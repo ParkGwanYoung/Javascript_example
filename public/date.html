@@ -14,6 +14,7 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<<<<<<< HEAD
     <script>
         var d = new Date();
         var months = ["January", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October","November","December"];
@@ -31,6 +32,27 @@
         document.getElementById("demo02").innerHTML = months[d.getMonth()];
         document.getElementById("demo03").innerHTML = Math.random();
     </script>
+=======
+</head>
+
+<body class="bg-dark">
+    <div class="container p-2">
+        <p id="demo01" class="border border-white text-white m-2 p-2"></p>
+        <script>
+            document.getElementById("demo01").innerHTML = parseInt("10.33") + "<br>" + parseInt("10 6") + "<br>" + parseInt("years 10");
+        </script>
+        <p id="demo02" class="border border-white text-white m-2 p-2"></p>
+        <script>
+            var d = new Date();
+            var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            document.getElementById("demo02").innerHTML = months[d.getMonth()];
+        </script>
+        <p id="demo03" class="border border-white text-white m-2 p-2"></p>
+        <script>
+            document.getElementById("demo03").innerHTML = Math.random();
+        </script>
+    </div>
+>>>>>>> 8a0dc1a1e98946719ff7c2852b4fb9752ba3746c
 </body>
 
 </html>
