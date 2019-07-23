@@ -14,23 +14,23 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script type="text/javascript">
-        function concatenate(first, last) {
+    <script>
+        function concatenate(first,last){
             var full;
             full = first + last;
             return full;
         }
-        function secondFunction() {
+        function secondFunction(){
             var result;
-            result = concatenate('Zara', 'Ali');
+            result = concatenate('Zara','Ali');
             document.write(result);
         }
     </script>
 </head>
 
-<body>
+<body class="bg-dark text-center">
     <form>
-        <input type="button" onclick="secondFunction()" value="Call Function">
+        <input type="button"  class="btn-success btn-lg border border-white m-5 p-3" onclick="secondFunction()" value="Call Function">
     </form>
 </body>
 
