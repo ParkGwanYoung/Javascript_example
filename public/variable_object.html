@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript">
+        var name = "Ali";
+        var money;
+        money = 2000.50;
+        var myVar = "global";
+        function checkscope() {
+            var myVar = "local";
+            document.write(myVar);
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <input type="button" onclick="checkscope()" value="Click to Check"></button>
+    </form>
+</body>
+
+</html>
