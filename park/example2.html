@@ -1,0 +1,238 @@
+<html>
+
+    <head>
+    
+    
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    
+    </head>
+    
+    <body>
+    
+    
+        <div class="container ">
+            <div class="row">
+    
+                <!-- 1번째 과제 -->
+                <div class="form-group col-lg-6">
+                    <label for="large">대분류: </label>
+                    <select class="form-control" id="large" onchange="change(this)">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+    
+    
+    
+                <div class="form-group col-lg-6">
+                    <label for="medium">중분류: </label>
+                    <select class="form-control" id="medium" onchange="change(this)">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+    
+                <script>
+                    function change() {
+                        var sel1 = document.getElementById("large").selectedIndex;
+                        var sel2 = document.getElementById("medium");
+                        var result = sel2.options[sel1].selected = true;
+                        return result;
+    
+                    }
+                </script>
+    
+            </div>
+    
+    
+    
+    
+    
+            <form name="testForm" action="/login" onsubmit="return inputFunction()" class="row">
+                <div class="form-group col-lg-4">
+                    <input class="form-control" id="first_name" name="first_name" type="text" placeholder="First name">
+                    <p id="event1"></p>
+                </div>
+    
+                <div class="form-group col-lg-4">
+                    <input class="form-control" id="last_name" name="last_name" type="text" placeholder="Last name">
+                    <p id="event2"></p>
+                </div>
+    
+                <div class="form-group col-lg-4">
+                    <input class="form-control" id="username" name="username" type="text" placeholder="Username">
+                    <p id="event3"></p>
+                </div>
+    
+                <div class="form-group col-lg-6">
+                    <input class="form-control" id="city" name="city" type="text" placeholder="City">
+                    <p id="event4"></p>
+                </div>
+    
+                <div class="form-group col-lg-3">
+                    <input class="form-control" id="state" name="state" type="text" placeholder="State">
+                    <p id="event5"></p>
+                </div>
+    
+                <div class="form-group col-lg-3">
+                    <input class="form-control" id="zip" name="zip" type="text" placeholder="Zip">
+                    <p id="event6"></p>
+                </div>
+                <div class="form-group form-check col-lg-12">
+                    <input name="check" type="checkbox" class="form-check-input" id="check1">
+                    <label class="form-check-label" for="exampleCheck1">Agree to terms and conditions</label>
+                    <p id="submitt"></p>
+                </div>
+    
+    
+                <button type="submit" class="btn btn-primary text-white rounded-pill">SUBMIT FORM</button>
+            </form>
+    
+    
+            <script>
+    
+                function inputFunction() {
+                    var check_return = true;
+                    var ment;
+                    var f_name = document.testForm.first_name.value;
+                    var l_name = document.testForm.last_name.value;
+                    var u_name = document.testForm.username.value;
+                    var city = document.testForm.city.value;
+                    var state = document.testForm.city.value;
+                    var zip = document.testForm.zip.value;
+                    var check = document.testForm.check1.checked;
+                    var last_name = document.getElementById("last_name");
+                    var first_name = document.getElementById("first_name");
+                    var username = document.getElementById("username");
+                    var city_id = document.getElementById("city");
+                    var state_id = document.getElementById("state");
+                    var zip_id = document.getElementById("zip");
+                    var check1 = document.getElementById("check1");
+                    if (f_name == null || f_name == "") {
+                        ment = "Please choose a first name";
+                        document.getElementById("event1").innerHTML = ment;
+                        first_name.classList.add("is-Invalid");
+                           
+                    }
+                    else{
+                        
+                            first_name.classList.remove("is-Invalid");
+                            first_name.classList.add("is-valid");
+                            document.getElementById("event1").classList.add("text-success");
+                            document.getElementById("event1").innerHTML = "Looks good!"
+                        
+                    }
+                    
+    
+                    if (l_name == null || l_name == "") {
+                            ment = "Please choose a last name";
+                            document.getElementById("event2").innerHTML = ment;
+                            last_name.classList.add("is-Invalid");
+                            check_return = false;
+    
+                            
+                    }
+                    else{
+                        
+                            last_name.classList.remove("is-Invalid");
+                            last_name.classList.add("is-valid");
+                            document.getElementById("event2").classList.add("text-success");
+                            document.getElementById("event2").innerHTML = "Looks good!"
+                        
+                    }
+    
+                    if (u_name == null || u_name == "") {
+                                ment = "Please choose a username";
+                                document.getElementById("event3").innerHTML = ment;
+                                username.classList.add("is-Invalid");
+                                check_return = false;
+                    }
+                    else{
+                        
+                            username.classList.remove("is-Invalid");
+                            username.classList.add("is-valid");
+                        
+                    }
+    
+                    if (city == null || city == "") {
+                                ment = "Please provide a valid city";
+                                document.getElementById("event4").innerHTML = ment;
+                                city_id.classList.add("is-Invalid");
+                                check_return = false;
+                    }
+                    else{
+                        
+                            city_id.classList.remove("is-Invalid");
+                            city_id.classList.add("is-valid");
+                        
+                    }
+    
+                    if (state == null || state == "") {
+                                ment = "Please provide a valid state";
+                                document.getElementById("event5").innerHTML = ment;
+                                state_id.classList.add("is-Invalid");
+                                check_return = false;
+                    }
+                    else{
+                            state_id.classList.remove("is-Invalid");
+                            state_id.classList.add("is-valid");
+                        
+                    }
+    
+                    if (zip == null || zip == "") {
+                                ment = "Please provide a valid zip";
+                                document.getElementById("event6").innerHTML = ment;
+                                zip_id.classList.add("is-Invalid");
+                                check_return = false;
+                    }
+                    else{
+                        
+                            zip_id.classList.remove("is-Invalid");
+                            zip_id.classList.add("is-valid");
+                        
+                    }
+    
+                    if(check == false){
+                        ment = "You must agree before submitting";
+                        document.getElementById("submitt").innerHTML = ment;
+                    }
+                    else{
+                            zip_id.classList.remove("is-Invalid");
+                            zip_id.classList.add("is-valid");
+                        
+                    }
+    
+    
+                   
+                    
+                    return check_return;   
+                       
+                }
+    
+            </script>
+    
+    
+        </div>
+    
+    
+    
+    
+    </body>
+    
+    </html>

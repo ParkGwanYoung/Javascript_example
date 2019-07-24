@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="demoo"></div>
+        <div id="demo"></div>
+        <div id="demo01"></div>
+
+        <script>
+            hello = (val) => "Hello " + val;
+            document.getElementById("demoo").innerHTML = hello("Universe!");
+            var person = {
+                fullName:function(city,country){
+                    return this.firstName + " " + this.lastNmae + "," + city + "," + country;
+                }
+            }
+            var person1 = {
+                firstName:"John" , lastNmae : "Doe"
+            }
+            var x = person.fullName.call(person1, "Oslo","Norway");
+            document.getElementById("demo").innerHTML = x;
+            var living = function(city,country){
+                return city + "," + country
+            }
+            document.getElementById("demo01").innerHTML = living('Korea','Pangyo')
+        </script>
+    </body>
+</html>
