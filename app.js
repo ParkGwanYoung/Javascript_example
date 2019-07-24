@@ -27,6 +27,10 @@ router.get('/b/submit', function (req, res) {
     res.send('<br>first name : ' + req.query.firstname + '<br>surname : ' + req.query.surname + '<br>e-mail : ' + req.query.email + '<br>password : ' + req.query.pwd
        +'<br>password confirm : ' + req.query.pwdcf + '<br>phone : ' + req.query.tel + '<br>month : ' + req.query.month + '<br>date : ' + req.query.date + '<br>year : ' + req.query.year + '<br>gender : ' + req.query.gender + '<br>agree send mail : ' + req.query.agree)
 });
+router.get('/cookie', function(req, res) {
+  res.sendFile(path.join(__dirname + '/public/bom_cookies.html'));
+});
+
 
 /////////////////////park///////////////////////////
 router.get('/p/intro', function(req, res) {
@@ -87,10 +91,6 @@ router.get('/p/login', function(req, res) {
       + '<br>Username : ' + req.query.username)
 });
 //////////////////////////////////////////////////
-router.get('/geo', function(req, res) {
-  res.send(
-      '<br>Latitude : ' + req.query.first_name)
-});
 
 
 
