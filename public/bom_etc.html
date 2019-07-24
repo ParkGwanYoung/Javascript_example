@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <input type="button" onclick="goMoving_back()" value="back">
+    <input type="button" onclick="goMoving_forward()" value="foward">
+    <script>
+        document.getElementById("demo").innerHTML = "Screen height is " + screen.height +  ", Screen width is " + screen.width;
+
+        function goMoving_back(){
+            window.history.back()
+        }
+        function goMoving_forward(){
+            window.history.forward()
+        }
+
+        document.getElementById("demo2").innerHTML = navigator.cookieEnabled;
+    </script>
+</body>
+
+</html>
