@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body class="bg-success">
+    <div class="container bg-primary border m-5 text-white">
+        <div id="demo">.....</div>
+    </div>
+    <!-- ///////////////////////////////////////// -->
+    <div class="container bg-primary border m-5 text-white">
+        <div id="demo1">.....</div>
+    </div>
+    <div class="container bg-primary border m-5 text-white">
+        <div id="demo2">.....</div>
+    </div>
+    <div class="container bg-primary border m-5 text-white">
+        <div id="demo3">.....</div>
+    </div>
+    <div class="container bg-primary border m-5 text-white">
+        <div id="demo4">.....</div>
+    </div>
+    <!-- ///////////////////////////////////////// -->
+
+    <script>
+        function f_compare(first, second) {
+            var x;
+            if (first > second) {
+                x = first;
+            }
+            else { x = second; }
+            return x;
+        }
+        document.getElementById("demo").innerHTML = f_compare(60, 70);
+        /////////////////////////////////
+        var string = "HTML element has been changed"
+        function f_getTextAndoutput(str1, text, array) {
+            var sentence = str1.split(text);
+            return sentence[array];
+        }
+        document.getElementById("demo1").innerHTML = f_getTextAndoutput(string, "been", 0);
+        document.getElementById("demo2").innerHTML = f_getTextAndoutput(string, "element", 0);
+        /////////////////////////////////
+        var string1 = "HTML element CSS"
+        var string2 = "CSS element HTML"
+        function f_getTextAndreplace(str, change_str1, change_str2) {
+            var exchange = str.replace(change_str1,change_str2)
+            return exchange;
+        }
+        document.getElementById("demo3").innerHTML = f_getTextAndreplace(string1, "CSS", "HTML");
+        document.getElementById("demo4").innerHTML = f_getTextAndreplace(string2, "CSS", "HTML");
+    </script>
+</body>
+
+</html>
