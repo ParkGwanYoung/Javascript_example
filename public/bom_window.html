@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <p id="header"></p>
+    <p id="demo"></p>
+    <script>
+        window.document.getElementById("header");
+        //window.open()
+        //window.close()
+        //window.moveTo()
+        //window.resizeTo()
+        var w = window.innerWidth
+            || document.documentElement.clientWidth
+            || document.body.clientWidth;
+
+        var h = window.innerHeight
+            || document.body.clientHeight;
+
+        var x = document.getElementById("demo");
+        x.innerHTML = "Browser inner window width: " + w + ", height: " + h + ".";
+    </script>
+</body>
+
+</html>
