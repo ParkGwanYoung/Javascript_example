@@ -59,6 +59,9 @@ router.get('/p/event', function(req, res) {
 router.get('/geo', function(req, res) {
   res.sendFile(path.join(__dirname + '/public/geolocation.html'));
 });
+router.get('/cookie', function(req, res) {
+  res.sendFile(path.join(__dirname + '/public/cookies.html'));
+});
 
 router.get('/park/sign_up', function(req, res) {
   res.send(
