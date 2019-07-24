@@ -56,7 +56,9 @@ router.get('/onsubmit', function(req, res) {
 router.get('/p/event', function(req, res) {
   res.sendFile(path.join(__dirname + '/park/event.html'));
 });
-
+router.get('/geo', function(req, res) {
+  res.sendFile(path.join(__dirname + '/public/geolocation.html'));
+});
 
 router.get('/park/sign_up', function(req, res) {
   res.send(
@@ -79,6 +81,10 @@ router.get('/p/login', function(req, res) {
       + '<br>Username : ' + req.query.username)
 });
 //////////////////////////////////////////////////
+router.get('/geo', function(req, res) {
+  res.send(
+      '<br>Latitude : ' + req.query.first_name)
+});
 
 
 

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function goMoving() {
+            window.history.back() //or window.history.forward()
+        }
+    </script>
+</head>
+
+<body onload="getLocation()">
+
+    <form action="geo">
+        <div id="demo"></div>
+    </form>
+    <script>
+        var x = document.getElementById("demo")
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.watchPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
+    </script>
+</body>
+
+</html>
