@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function goMoving() {
+            window.history.back() //or window.history.forward()
+        }
+    </script>
+</head>
+
+<body>
+    <button type="button" onclick="goMoving()">Back</button>
+    <p>online: <span id="demo"></span></p>
+    <p>appname: <span id="appname"></span></p>
+    <p>appcodename: <span id="appcodename"></span></p>
+    <p>platform: <span id="platform"></span></p>
+    <p>cookie: <span id="cookie"></span></p>
+    <p>user agent: <span id="useragent"></span></p>
+    <p>language: <span id="language"></span></p>
+    <script>
+        document.getElementById("demo").innerHTML = navigator.onLine;
+        document.getElementById("appname").innerHTML = navigator.appName;
+        document.getElementById("appcodename").innerHTML = navigator.appCodeName;
+        document.getElementById("platform").innerHTML = navigator.platform;
+        document.getElementById("cookie").innerHTML = navigator.cookieEnabled;
+        document.getElementById("useragent").innerHTML = navigator.userAgent;
+        document.getElementById("language").innerHTML = navigator.language;
+    </script>
+</body>
+
+</html>
