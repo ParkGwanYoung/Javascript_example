@@ -7,7 +7,7 @@
             var name = document.myform.name.value;
             var password = document.myform.password.value;
             var pw_length = password.length;
-            var check;
+            var check = true;
             // if (name == null || name == "" || pw_length <= 6) {
             //     var strvalidation = "Name can't be blank<br>password must be at least 6 characters long.";
             //     document.getElementById("demo01").innerHTML = strvalidation;
@@ -18,12 +18,11 @@
                 document.getElementById("demo01").innerHTML = strvalidation1;
                 check = false;
             }
-            else if (pw_length <= 6) {
+            if (pw_length <= 6) {
                 var strvalidation2 = "password must be at least 6 characters long.";
                 document.getElementById("demo02").innerHTML = strvalidation2;
                 check = false;
             }
-            else{check = true}
             return check;
         }
     </script>
