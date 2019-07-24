@@ -8,39 +8,36 @@
             var first_name = document.myform.first_name.value;
             var last_name = document.myform.last_name.value;
             var username = document.myform.username.value;
-            var check;
+            var check = true;
 
             if (first_name == null || first_name == "") {
                 var strvalidation = "Please choose a First name";
                 document.getElementById("first_name").innerHTML = strvalidation;
-                check=false;
+                check = false;
             }
-            else{
+            if (check = true)
                 var strvalidation = "Looks good!"
                 document.getElementById("first_name").innerHTML = strvalidation;
-                check=true;
-            }return check;
+            }
             ////////////////////////////////
             if (last_name == null || last_name == "") {
                 var strvalidation = "Please choose a Last name";
                 document.getElementById("last_name").innerHTML = strvalidation;
-                return false;
+                check = false;
             }
-            else {
+            if (check = true) {
                 var strvalidation = "Looks good!"
                 document.getElementById("last_name").innerHTML = strvalidation;
-                return true;
             }
             //////////////////////////////////
             if (username == null || username == "") {
                 var strvalidation = "Please choose a Username";
                 document.getElementById("username").innerHTML = strvalidation;
-                return false;
+                check = false;
             }
-            else {
+            if (check = true) {
                 var strvalidation = "Looks good!"
                 document.getElementById("username").innerHTML = strvalidation;
-                return true;
             }
 
         }
