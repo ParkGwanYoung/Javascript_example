@@ -1,0 +1,96 @@
+<html>
+
+<head>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="./js/try_function.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="display-3 text-center">Try - Function</h1>
+        <!-- 크기 비교 function 만들기 -->
+        <h1>크기 비교 function 만들기</h1>
+        <form name="testForm" class="row">
+            <div class="form-group input-group col-lg-6">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">첫번째 값</span>
+                </div>
+                <input type="text" name="first" class="form-control">
+            </div>
+            <div class="form-group input-group col-lg-6">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">두번째 값</span>
+                </div>
+                <input type="text" name="second" class="form-control">
+            </div>
+            <button type="button" class="btn btn-outline-primary btn-lg btn-block"
+                onclick="f_compare(first.value, second.value)">함수 출력</button>
+
+        </form>
+        Output : <span id="compare_output"></span>
+
+
+        </p>
+        <!-- 동일단어 제외 문장 출력 Function 만들기 : str 값 변화 없음. -->
+        <h1>동일 단어 제외 문장출력 function 만들기</h1>
+        <form name="subForm" class="row">
+            <div class="form-group input-group col-lg-6">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">고정문자</span>
+                </div>
+                <input type="text" name="main_text" class="form-control" value="HTML element has been changed" disabled>
+            </div>
+            <div class="form-group input-group col-lg-6">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">문자입력</span>
+                </div>
+                <input type="text" name="input_text" class="form-control">
+            </div>
+            <button type="button" class="btn btn-outline-primary btn-lg btn-block"
+                onclick="f_subStringWithText(main_text.value, input_text.value)">확인</button>
+        </form>
+        Output : <span id="substring_output"></span>
+
+
+
+
+        <!-- 문자 위치 바꾸는 function 만들기 -->
+        <h1>문자 위치 바꾸는 function 만들기</h1>
+        <form name="replaceForm" class="row">
+            <div class="form-group input-group col-lg-6">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">고정문자</span>
+                </div>
+                <input type="text" name="main_text" class="form-control" value="HTML element CSS" disabled>
+            </div>
+            <div class="form-group input-group col-lg-6">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">문자입력</span>
+                </div>
+                <input type="text" name="input_text" class="form-control">
+
+            </div>
+            <button type="button" class="btn btn-outline-primary btn-lg btn-block"
+                onclick="f_getTextAndreplace(main_text.value, 'CSS', input_text.value)">확인</button>
+        </form>
+        Output : <span id="replace_output"></span>
+
+
+    </div>
+</body>
+
+</html>

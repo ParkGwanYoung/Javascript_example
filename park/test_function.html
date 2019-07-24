@@ -19,7 +19,14 @@
 
 <body class="bg-success">
     <div class="container bg-primary border m-5 text-white">
-        <div id="demo">.....</div>
+        <!-- <div id="demo">.....</div> -->
+        <form name="first">
+          <div class="form-row">
+              <input type="text" placeholder="first_num" class="col">
+              <input type="text" placeholder="second_num" class="col">
+              <input type="button" class="col" >result
+          </div>
+        </form>
     </div>
     <!-- ///////////////////////////////////////// -->
     <div class="container bg-primary border m-5 text-white">
@@ -59,7 +66,8 @@
         var string2 = "CSS element HTML"
         function f_getTextAndreplace(str, change_str1, change_str2) {
             var exchange = str.replace(change_str1,change_str2)
-            return exchange;
+            var exchange2 = exchange.replace(change_str2,change_str1)
+            return exchange2;
         }
         document.getElementById("demo3").innerHTML = f_getTextAndreplace(string1, "CSS", "HTML");
         document.getElementById("demo4").innerHTML = f_getTextAndreplace(string2, "CSS", "HTML");
