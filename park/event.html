@@ -2,64 +2,107 @@
 <html>
 
 <head>
-    <script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'
+        integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<script>
 
-        function validateform() {
-            var first_name = document.myform.first_name.value;
-            var last_name = document.myform.last_name.value;
-            var username = document.myform.username.value;
-            var check;
+    function validateform() {
+        var first_name = document.myform.first_name.value;
+        var last_name = document.myform.last_name.value;
+        var username = document.myform.username.value;
+        var check1 = true;
+        var check2 = true;
+        var check3 = true;
 
-            if (first_name == null || first_name == "") {
-                var strvalidation = "Please choose a First name";
-                document.getElementById("first_name").innerHTML = strvalidation;
-                check=false;
-            }
-            else{
-                var strvalidation = "Looks good!"
-                document.getElementById("first_name").innerHTML = strvalidation;
-                check=true;
-            }return check;
-            ////////////////////////////////
-            if (last_name == null || last_name == "") {
-                var strvalidation = "Please choose a Last name";
-                document.getElementById("last_name").innerHTML = strvalidation;
-                return false;
-            }
-            else {
-                var strvalidation = "Looks good!"
-                document.getElementById("last_name").innerHTML = strvalidation;
-                return true;
-            }
-            //////////////////////////////////
-            if (username == null || username == "") {
-                var strvalidation = "Please choose a Username";
-                document.getElementById("username").innerHTML = strvalidation;
-                return false;
-            }
-            else {
-                var strvalidation = "Looks good!"
-                document.getElementById("username").innerHTML = strvalidation;
-                return true;
-            }
+        if (first_name == null || first_name == "") {
+            var strvalidation = "Please choose a First name";
+            document.getElementById("first_name").innerHTML = strvalidation;
+            check1 = false;
+        }
+        if (check1 = true)
+            var strvalidation = "Looks good!"
+        document.getElementById("first_name").innerHTML = strvalidation;
+    }
+    ////////////////////////////////
+    if (last_name == null || last_name == "") {
+        var strvalidation = "Please choose a Last name";
+        document.getElementById("last_name").innerHTML = strvalidation;
+        check2 = false;
+    }
+    if (check2 = true) {
+        var strvalidation = "Looks good!"
+        document.getElementById("last_name").innerHTML = strvalidation;
+    }
+    //////////////////////////////////
+    if (username == null || username == "") {
+        var strvalidation = "Please choose a Username";
+        document.getElementById("username").innerHTML = strvalidation;
+        check3 = false;
+    }
+    if (check3 = true) {
+        var strvalidation = "Looks good!"
+        document.getElementById("username").innerHTML = strvalidation;
+    }
 
         }
-    </script>
-</head>
+</script>
 
 <body>
     <div class="container">
-        <div>
-            <div id="first_name"></div>
-            <div id="last_name"></div>
-            <div id="username"></div>
-        </div>
-        <form name="myform" action="/p/login" onsubmit="return validateform()">
-            first_name: <input type="text" name="first_name"><br />
-            last_name: <input type="text" name="last_name"><br />
-            username: <input type="text" name="username"><br />
-            <input type="submit" cla value="register">
-        </form>
+        <form name="first_col" action="/onsubmit" class="p-3 m-3" onsubmit="">
+            <div class="row">
+                <div class="form-group col">
+                    <label for="first_name" class="text-secondary">First name</label>
+                    <input type="text" class="form-control is-valid" name="first_name" placeholder="First name">
+                </div>
+                <div class="form-group col ml-2">
+                    <label for="last_name" class="text-secondary font-weight-bold">Last_name</label>
+                    <input type="text" class="form-control is-valid" name="last_name" placeholder="Last name">
+                </div>
+                <div class="form-group col ml-2">
+                    <label for="username" class="text-secondary font-weight-bold">Username</label>
+                    <input type="text" class="form-control is-invalid" name="username" placeholder="Username">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-6">
+                    <input type="text" class="form-control is-invalid" name="city" placeholder="City">
+                </div>
+                <div class="form-group col-2.5 ml-1">
+                    <input type="text" class="form-control is-invalid" name="state" placeholder="State">
+                </div>
+                <div class="form-group col-2.5 ml-2">
+                    <input type="text" class="form-control is-invalid" name="zip" placeholder="Zip">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <input type="checkbox" class="form-control col-2" name="agree">
+                    <div class="col-10">Agree to terms and conditions</div>
+                    <div class="col-12 text-danger">You must agree before submitting</div>
+                </div>
+            </div>
+
+
+    <div class="form-group">
+        <button type="submit" class="btn rounded btn-primary border border-secondary" type="button">Submit</button>
+    </div>
+    </form>
     </div>
 </body>
 
