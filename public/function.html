@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo01"></p>
+    <p id="demo02"></p>
+    <script>
+        hello = (val) => "Hello " + val;
+        document.getElementById("demo").innerHTML = hello("Universe!");
+        var person = {
+            fullName: function (city, country) {
+                return this.firstName + " " + this.lastName + "," + city + "," + country;
+            }
+        }
+        var person1 = {
+            firstName: "John", lastName: "Doe"
+        }
+        var x = person.fullName.call(person1, "Oslo", "Norway");
+        document.getElementById("demo01").innerHTML = x;
+        var living = function (city, country) {
+            return city + "," + country;
+        }
+        document.getElementById("demo02").innerHTML = living('Korea', 'Pangyo');
+    </script>
+</body>
+
+</html>

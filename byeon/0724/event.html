@@ -15,14 +15,27 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script>
-        function getvalue(input) {
-            var result =  "document.register." + input +"value";
-            return result;
-        }
         function validate() {
-            var first = getvalue(first);
-            var last = getvalue(last);
-            var user = getvalue(user);
+            var first = document.register.first.value;
+            var last = document.register.last.value;
+            var user = document.register.user.value;
+            var city = document.register.city.value;
+            var state = document.register.state.value;
+            var zip = document.register.zip.value;
+            var valid = true;
+            if (first == null || first == "") {
+                var change = document.getElementById("first").innerHTML.replace("form-control", "form-control is-invalid");
+                document.getElementById("first").innerHTML = change;
+                valid = false;
+            } else {
+                var change = document.getElementById("first").innerHTML.replace("form-control", "form-control is-valid");
+                document.getElementById("first").innerHTML = change;
+                valid = false;
+            }
+            if (last == null || last == "") {
+                document.getElementById("lastval").innerHTML = "Please provide your lastname.";
+                valid = false;
+            }
             return false;
         }
 
@@ -33,26 +46,32 @@
     <div class="container">
         <form name="register" action="/submit" onsubmit="return validate()">
             <div class="form-row">
-                <div class="col form-group">
+                <div class="col form-group" id="first">
                     <input type="text" class="form-control" name="first" placeholder="First name">
+                    <div class="valid-feedback" id="lastval"></div>
                 </div>
                 <div class="col form-group">
                     <input type="text" class="form-control" name="last" placeholder="Last name">
+                    <div class="valid-feedback" id="lastval"></div>
                 </div>
                 <div class="col form-group">
                     <input type="text" class="form-control" name="user" placeholder="Username">
+                    <div class="valid-feedback" id="userval"></div>
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="col-6 form-group">
                     <input type="text" class="form-control" name="city" placeholder="City">
+                    <div class="valid-feedback" id="cityval"></div>
                 </div>
                 <div class="col form-group">
-                    <input type="text" class="form-control" name="State" placeholder="State">
+                    <input type="text" class="form-control" name="state" placeholder="State">
+                    <div class="valid-feedback" id="stateval"></div>
                 </div>
                 <div class="col form-group">
                     <input type="text" class="form-control" name="zip" placeholder="Zip">
+                    <div class="valid-feedback" id="zipval"></div>
                 </div>
             </div>
             <div class="form-group">
