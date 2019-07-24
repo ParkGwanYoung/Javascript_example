@@ -62,6 +62,9 @@ router.get('/geo', function(req, res) {
 router.get('/cookie', function(req, res) {
   res.sendFile(path.join(__dirname + '/public/cookies.html'));
 });
+router.get('p/cookie', function(req, res) {
+  res.sendFile(path.join(__dirname + '/park/login_cookies.html'));
+});
 
 router.get('/park/sign_up', function(req, res) {
   res.send(
