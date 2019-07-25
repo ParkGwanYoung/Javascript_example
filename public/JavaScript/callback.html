@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function execFunction(firstparam) {
+            prefunction(firstparam.name, "second", callbackfunction);
+        };
+        function prefunction(param02, paramsecond02, callback01) {
+            console.log(param02);
+            if (typeof callback01 == 'function') {
+                callback01(param02, paramsecond02);
+            }
+        }
+        function callbackfunction(param01, paramsecond01) {
+            console.log(param01 + ',' + paramsecond01);
+            console.log("callbaack Call");
+        }
+    </script>
+</head>
+
+<body>
+<button onclick="execFunction(this);" name="exec Function">exec Function</button>
+</body>
+
+</html>
