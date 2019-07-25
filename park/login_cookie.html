@@ -19,9 +19,9 @@
 </head>
 
 <body>
-    <button onclick="setCookie('usermail','otter@gmail.com',20)">setCookie</button>
+    <!-- <button onclick="setCookie('usermail','otter@gmail.com',20)">setCookie</button> -->
     <button onclick="getCookie()">getCookie</button>
-    <form action="/first" class="m-5 p-3 border border-secondary">
+    <form action="#" name="myform" class="m-5 p-3 border border-secondary">
         <div class="form-group">
             <label class="h5 font-weight-bold" for="email">Email:</label>
             <input type="email" class="form-control" name="email" placeholder="Enter email">
@@ -32,18 +32,18 @@
         </div>
 
         <div class="form-group">
-            <button type="submit" class="btn rounded btn-white border border-secondary" type="button" onclick="setCookie(email.value,password.value)">Submit</button>
+            <button type="submit" class="btn rounded btn-white border border-secondary" type="button" onsubmit="setCookie(this_form)">Submit</button>
         </div>
     </form>
     <script>
-        function setCookie(name, password) {
+        function setCookie(form) {
             var d = new Date();
             d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
             var expires = "expires=" + d.toGMTString();
-            document.cookie = name + "=" + password + ";" + expires + ";path=/";
+            document.cookie = form.email.value + "=" + form.password.value + ";" + expires + ";path=/";
             alert(document.cookie);
         }
-        function getCookie() {
+        function getCookie(form) {
             var decodedCookie = decodeURIComponent(document.cookie);
             var ca = decodedCookie.split(';');
             alert(ca);
