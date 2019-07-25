@@ -3,23 +3,26 @@
 
 <head>
     <script>
-        function execFunction(param) {
-            prefunction(param.name, callbackfunction);
-        };
-        function prefunction(param02, callback01) {
-            if (typeof callback01 == 'function') {
-                callback01(param02);
+        var exec = {
+            execFunction: function (param) {
+                this.prefunction(param.name, this.callbackfunction);
+            },
+            prefunction: function (param02, callback01) {
+                if (typeof callback01 == 'function') {
+                    callback01(param02);
+                }
+            },
+            callbackfunction: function (param01) {
+                document.getElementById("result").innerHTML = "You clicked " + param01 + "!"
             }
         }
-        function callbackfunction(param01) {
-            document.getElementById("result").innerHTML = "You clicked " + param01 + "!"
-        }
+
     </script>
 </head>
 
 <body>
-    <button onclick="execFunction(this);" name="Button01">Button01</button>
-    <button onclick="execFunction(this);" name="Button02">Button02</button>
+    <button onclick="exec.execFunction(this);" name="Button01">Button01</button>
+    <button onclick="exec.execFunction(this);" name="Button02">Button02</button>
     <p id="result"></p>
 </body>
 
