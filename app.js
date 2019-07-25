@@ -58,19 +58,19 @@ router.get('/p/write', function(req, res) {
   res.sendFile(path.join(__dirname + '/park/write.html'));
 });
 router.get('/onsubmit', function(req, res) {
-  res.sendFile(path.join(__dirname + '/public/onsubmit.html'));
+  res.sendFile(path.join(__dirname + '/javascript/public/onsubmit.html'));
 });
 router.get('/p/event', function(req, res) {
-  res.sendFile(path.join(__dirname + '/park/event.html'));
+  res.sendFile(path.join(__dirname + '/javascript/park/event.html'));
 });
 router.get('/geo', function(req, res) {
-  res.sendFile(path.join(__dirname + '/public/geolocation.html'));
+  res.sendFile(path.join(__dirname + '/javascript/public/geolocation.html'));
 });
 router.get('/cookie', function(req, res) {
-  res.sendFile(path.join(__dirname + '/public/cookies.html'));
+  res.sendFile(path.join(__dirname + '/javascript/public/cookies.html'));
 });
 router.get('/p/cookie', function(req, res) {
-  res.sendFile(path.join(__dirname + '/park/login_cookie.html'));
+  res.sendFile(path.join(__dirname + '/javascript/park/login_cookie.html'));
 });
 
 router.get('/park/sign_up', function(req, res) {
