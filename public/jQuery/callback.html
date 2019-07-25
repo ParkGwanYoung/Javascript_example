@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $("button").click(function () { //순서 동작
+                $("p").hide("slow", function () {
+                    alert("Example with Callback");
+                });
+            });
+            $("h1").click(function () { //시스템 우선순위 동작
+                $("p").show(1000);
+                alert("Example without Callback");  //Call always (Error 시)
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button>Hide</button>
+    <p>This is a paragraph with little content.</p>
+    <h1>Here Click</h1>
+</body>
+
+</html>
