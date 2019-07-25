@@ -15,38 +15,24 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script>
-        $().ready(function () {
-            $("input").focus(function () {
-                $(":focus").css("background-color", "gray");
+        $(function(){
+            $("p").on({
+                mouseenter: function(){
+                    $(this).css("background-color", "lightgray");
+                },
+                mouseleave: function(){
+                    $(this).css("background-color", "lightblue");
+                },
+                click: function() {
+                    $(this).css("background-color", "yellow");
+                }
             });
-            $(":empty").css("background-color", "yellow");
-            $(":checkbox").wrap("<span style='background-color:red'>");
         });
     </script>
 </head>
 
 <body>
-    <input type="text" class="form-control">
-    <table class="table table-bordered">
-        <thead>
-            <th>Company</th>
-            <th></th>
-            <th>Country</th>
-        </thead>
-        <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Maria Anders</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Berglunds snabbkop</td>
-            <td></td>
-            <td>Sweden</td>
-        </tr>
-    </table>
-    <input type="checkbox">
-    <input type="checkbox">
-    <input type="checkbox">
+    <p>Click or move the mouse pointer over this paragraph.</p>
 </body>
 
 </html>
