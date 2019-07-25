@@ -30,6 +30,9 @@ router.get('/b/submit', function (req, res) {
 router.get('/cookie', function(req, res) {
   res.sendFile(path.join(__dirname + '/public/bom_cookies.html'));
 });
+router.get('/login', function(req, res) {
+  res.sendFile(path.join(__dirname + '/byeon/0724/login.html'));
+});
 
 
 /////////////////////park///////////////////////////
