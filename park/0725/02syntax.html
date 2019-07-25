@@ -19,18 +19,25 @@
 <body>
     <h1>This is a paragraph</h1>
     <script>
-        var ready = function popUp(){
-            alert("Yout entered h1!")
-        }
-        $(function(){
-            ready.$("h1").hover(popUp());
-        });
+        // $().ready(function(){
+        //     $("button").click(function(){
+        //         $("p").hide();  
 
-        // var hover = function(param){
-        //     $("h1").hover(ready)
-        // }
-        // $().ready(hover);
+        var f_two =function(param){
+            $("p").hide();
+        }
+
+        var f_one = function(param){
+            $("button").click(f_two);
+        }
+
+        $().ready(f_one);
+   
+
+
     </script>
 </body>
+<p>This is a paragraph</p>
+<button>Click me</button>
 
 </html>
