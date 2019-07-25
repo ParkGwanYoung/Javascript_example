@@ -14,21 +14,18 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script>
-        function popUp() {
-            alert("You entered h1!");
-        }
-        $(function () {
-            $("h1").hover(popUp());
-            $("h1").click(function () {
-                $("h1").hide();
+        <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+                    $("p").hide();
+                });
             });
-        });
-    </script>
+        </script>
 </head>
 
 <body>
-    <h1>This is a paragraph.</h1>
+    <p>This is a paragraph.</p>
+    <button>Click me</button>
 </body>
 
 </html>
