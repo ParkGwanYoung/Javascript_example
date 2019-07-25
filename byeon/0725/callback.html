@@ -3,6 +3,20 @@
 
 <head>
     <script>
+        //function 3개로 callback
+        /*
+        function execFunction(param) {
+            prefunction(param.name, callbackfunction);
+        };
+        function prefunction(param02, callback01) {
+            if (typeof callback01 == 'function') {
+                callback01(param02);
+            }
+        }
+        function callbackfunction(param01) {
+            document.getElementById("result").innerHTML = "You clicked " + param01 + "!"
+        }*/
+        //3 functions in 1 object
         var exec = {
             execFunction: function (param) {
                 this.prefunction(param.name, this.callbackfunction);
