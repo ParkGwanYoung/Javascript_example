@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="./content_get_set.js"></script>
+</head>
+
+<body>
+    <button id="btn1">Button 1</button>
+    <button id="btn2">Button 2</button>
+    <button id="btn3">Button 3</button>
+    <p id="para1"><b>Note1:</b> Click the above buttons to set the value of following input box.</p>
+    <p id="para2"><b>Note2:</b> Click the above buttons to set the value of following input box.</p>
+    <br><br><br>
+    <input type="checkbox" id="chkall"><label for="chkall">Select All</label><br>
+    <input type="checkbox" id="chk01"><label for="chk01">Arduino</label>
+    <input type="checkbox" id="chk02"><label for="chk02">Android</label>
+    <input type="checkbox" id="chk03"><label for="chk03">AI</label>
+    <input type="checkbox" id="chk04"><label for="chk04">Big Data</label><br><br><br>
+    <p>Name: <input type="text" id="name"></p>
+    <p>Comment: <textarea id="comment" cols="30" rows="4"></textarea></p>
+    <p>City: <select id="city">
+            <option value="Seoul">Seoul</option>
+            <option value="Paris">Paris</option>
+            <option value="London">London</option>
+            <option value="Rome">Rome</option>
+        </select>
+    </p>
+    <p><b>Note: </b>Fill the above form and click the following button to get the value.</p>
+    <button id="btn4">Get Name</button>
+    <button id="btn5">Get Comment</button>
+    <button id="btn6">Get City</button>
+    <p id="res1"></p>
+    <p id="res2"></p>
+    <p id="res3"></p>
+</body>
+
+</html>
