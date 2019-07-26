@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+        </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <script>
+        $(function () {
+            $("#btn1").click(function () { $("p").append(" <b>Appended text</b>."); });
+        });
+    </script>
+
+    <p>This is another paragraph.</p>
+    <button id="btn1">Append text</button>
+
+    <script>
+        $(document).ready(function () {
+            $("#button01").click(function () { $(".test").empty(); });
+            $("#button02").click(function () { $("p").remove(".test, .demo"); });
+        });
+    </script>
+
+    <p class="test" style="border:1px solid black;">This is a paragraph in the
+        div.</p>
+    <p class="demo">This is another paragraph in the div.</p>
+    <button id="button01">Empty the div element</button>
+    <button id="button02">Remove all p elements</button>
+
+</body>
+
+</html>
