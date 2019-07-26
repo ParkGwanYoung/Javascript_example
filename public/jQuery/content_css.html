@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("h1, h2, p").toggleClass("blue");
+            });
+            $("#btn2").click(function () {
+                alert("Background color = " + $("p").css("background-color")); //return
+            });
+            $("p").css({ "background-color": "yellow", "font-size": "200%" });
+        });
+    </script>
+    <style>
+        .blue {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn1">Click to toggle CSS</button>
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <p>This is a paragraph.</p>
+    <button id="btn2">Button</button>
+</body>
+
+</html>
