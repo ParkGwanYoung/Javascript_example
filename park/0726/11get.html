@@ -21,28 +21,19 @@
 
     <script>
         $(function(){
-            $("#flip").click(function(){
-                // $("#panel").slideToggle("slow");
-                $("#panel").css("color","red").slideDown(2000).slideUp(2000);
-            });
-            $("#stop").click(function(){
-                $("#panel").stop();
-            });
+        $("#btn1").click(function(){ alert("Text: " + $("#test").text()); });
+        $("#btn2").click(function(){ alert("HTML: " + $("#test").html()); });
+        $("#btn3").click(function(){ alert("Value: " + $("#test01").val()); });
+        $("#lab").click(function(){ alert("Attribute: " + $("#yojulab").attr("href")); 
         });
+    });
     </script>
-        <style>
-            #panel,#flip{
-                padding: 5px; 
-                text-align: 
-                center;
-                background-color: #e5eecc;
-                border : solid 1px #c3c3c3; 
-            }
-            #panel { padding: 50px; display: none; }
-        </style>
-        <button id="stop">Stop</button>
-        <div id="flip"><img src="../img/mini05.PNG" class="card-img-top" alt="cat"></div>
-        <div id="panel">Hello world!</div>
+    <p id="test">This is some <b>bold</b>text in a paragraph</p>
+    <button id="btn1">Show Text</button>
+    <button id="btn2">Show HTML</button>
+    <p>Name: <input type="text" id="test01" value="Mickey Mouse"> </p>
+    <button id="btn3">Show Values</button>
+    <p><a href="https://www.yojulab.com" id="yojulab">yojulab.com</a></p>
 </body>
 
 </html>

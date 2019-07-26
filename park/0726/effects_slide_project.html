@@ -20,45 +20,29 @@
 <body>
 
     <script>
-        $(function(){
-            $("#start").click(function(){
+        $(function () {
+            $("#start").click(function () {
                 $("#card").slideToggle("slow");
             });
-            $("#stop").click(function(){
+            $("#stop").click(function () {
                 $("#card").stop();
             });
         });
     </script>
-        <style>
-        </style>
-        <div class="container">
-            <div id="card" class="card-columns">
-                <div class="card">
-                        <img src="/park/img/mini01.png" class="card-img-top" alt="cat">
-                    <div class="card-body text-">
-                        사진
-                    </div>
-                </div>
-                <div class="card">
-                        <img src="/park/img/mini05.png" class="card-img-top" alt="cat">
-                    <div class="card-body">
-                        사진
-                    </div>
-                </div>
-                <div class="card">
-                        <img src="/park/img/mini06.png" class="card-img-top" alt="cat">
-                    <div class="card-body">
-                        사진
-                    </div>
-                </div>
-            </div>
-
-        </div>
+    <style>
+        #card {
+            padding: 50px;
+            display: none;
+        }
+    </style>
+    <div id="card">
+            <img src="../img/mini01.PNG">
+    </div>
 
 
 
-        <button id="strat">Start sliding</button>
-        <button id="stop">Stop sliding</button>
+    <button id="strat">Start sliding</button>
+    <button id="stop">Stop sliding</button>
 </body>
 
 </html>
