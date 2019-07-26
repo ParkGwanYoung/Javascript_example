@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+            slide("#btn01", "#box01");
+            slide("#btn02", "#box02");
+            slide("#btn03", "#box03");
+            $("#slideall").click(function () {
+                $("#box01, #box02, #box03").slideDown("slow");
+            });
+            $("#stopall").click(function () {
+                $("#box01, #box02, #box03").stop("slow");
+            })
+        });
+        function slide(btn, target) {
+            $(btn).click(function () {
+                $(target).slideToggle("slow");
+            });
+        }
+    </script>
+    <style>
+        body {
+            margin: 0;
+        }
+        .btn {
+            width: 200px;
+            display: inline-block;
+            text-align: center;
+            color: white;
+            padding: 1em;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+
+        #btn01 {
+            background-color: green;
+        }
+
+        #btn02,
+        #slideall {
+            background-color: blue;
+        }
+
+        #btn03,
+        #stopall {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="btn01" class="btn">Image01</div>
+    <div id="btn02" class="btn">Image02</div>
+    <div id="btn03" class="btn">Image03</div>
+    <div id="box01" class="box"></div>
+    <div id="box02" class="box"></div>
+    <div id="box03" class="box"></div>
+    <div id="slideall" class="btn">Start Sliding</div>
+    <div id="stopall" class="btn">Stop Sliding</div>
+</body>
+
+</html>
