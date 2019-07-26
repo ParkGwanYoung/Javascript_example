@@ -20,38 +20,38 @@
 
 <body>
     <div class="container">
-        <!--과제1 내용 삭제, 생성 붙여놓기.-->
+        <!--삭제,생성,붙여넣기-->
         <div class="mt-5" id="add">
-            <button id="rem" type="button" class="btn">삭제</button>
-            <button id="cre" type="button" class="btn">생성</button>
-            <button id="pas" type="button" class="btn">붙여놓기</button>
+            <button id="rem" type="button" class="btn-info">삭제</button>
+            <button id="cre" type="button" class="btn-info">생성</button>
+            <button id="pas" type="button" class="btn-info">붙여놓기</button>
             <p id="para1"><b>Note: </b>Click the above buttons to set the value of following input box.</p>
             <p id="para2"><b>Note: </b>Click the above buttons to set the value of following input box.</p>
         </div>
-        <!--과제2 value 값 넘기기-->
+        <!--값(value) 넘기기-->
         <form>
             <div class="form-group">
                 <label>Name: </label>
                 <input class="form-control" name="name" id="name">
             </div>
             <div class="form-group">
-                <label>Comment: </label>
-                <input class="form-control" name="comment" id="comment">
+                <div>Comment: </div>
+                <textarea name="comment" id="comment"></textarea>
             </div>
             <div class="form-group">
-                <select class="form-control" name="city" id="city">
+                <select type=text name="city" id="city">
                     <option value="Paris">Paris</option>
                     <option value="Seoul">Seoul</option>
                     <option value="London">London</option>
                     <option value="NewYork">NewYork</option>
                 </select>
             </div>
-            <button type="button" class="btn" id="btn1">Get Name</button>
-            <button type="button" class="btn" id="btn2">Get Comment</button>
-            <button type="button" class="btn" id="btn3">Get city</button>
+            <button type="button" class="btn-warning" id="btn1">Get Name</button>
+            <button type="button" class="btn-success" id="btn2">Get Comment</button>
+            <button type="button" class="btn-danger" id="btn3">Get city</button>
             <input class="form-control" name="boxbox" id="boxbox">
         </form>
-        <!--과제3 CheckToggle???? 만들기-->
+        <!--All_check-->
         <form class="mt-5">
             <div class="form-group">
                 <input class="check" type="checkbox" value="Arduino">
@@ -69,7 +69,7 @@
                 <input class="check" type="checkbox" value="Big Data">
                 <label>Big Data</label>
             </div>
-            <button type="button" id="checkbtn">All check Toggle</button>
+            <button type="button" id="checkbtn" class="btn-primary">All check Toggle</button>
         </form>
 
     </div>
